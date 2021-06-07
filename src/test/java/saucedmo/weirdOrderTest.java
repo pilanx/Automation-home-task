@@ -1,11 +1,14 @@
 package saucedmo;
 
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.ElementsCollection;
 import org.testng.annotations.Test;
 import saucedemo.cartPage;
 import saucedemo.checkoutPage;
 import saucedemo.homePage;
 import saucedemo.loginPage;
+
+import java.util.List;
 
 import static com.codeborne.selenide.Condition.checked;
 import static com.codeborne.selenide.Condition.text;
@@ -43,10 +46,5 @@ public class weirdOrderTest extends baseTest {
         checkoutPage.finishButton().click();
         checkoutPage.finalMessage().shouldHave(text("Your order has been dispatched,\n" +
                 "and will arrive just as fast as the pony can get there!"));
-
-
-
-
-
     }
 }

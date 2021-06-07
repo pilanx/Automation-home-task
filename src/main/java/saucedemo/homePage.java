@@ -17,7 +17,8 @@ import static com.codeborne.selenide.Selenide.$$;
 public class homePage {
 private final SelenideElement sortContainer = $(byClassName("product_sort_container"));
 private final SelenideElement priceHightoLow = $(byText("Price (high to low)"));
+private final SelenideElement priceLowtoHigh = $(byText("Price (low to high)"));
 private final ElementsCollection storeItem = $$("button");
 private final SelenideElement cartBade = $(byClassName("shopping_cart_badge"));
-
+private final ElementsCollection allitemList = $$(byClassName("inventory_item_price"));
 }
